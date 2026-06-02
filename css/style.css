@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@400;500;700&display=swap');
+
+/* ==========================================================================
+   1. VARIABLES & TEMA BAKSO MIE WAMIN
+   ========================================================================== */
+:root {
+    --spicy-red: #D32F2F;
+    --tasty-yellow: #FFB300;
+    --clean-white: #FAFAFA;
+    --dark-text: #212121;
+    --grey-text: #757575;
+    --light-text: #FFFFFF;
+}
+
+/* ==========================================================================
+   2. GLOBAL RESETS
+   ========================================================================== */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+html { 
+    scroll-behavior: smooth; /* Mengaktifkan animasi scroll halus */
+    scroll-padding-top: 110px; /* Memberikan jarak henti agar judul tidak tertutup navbar */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--clean-white);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+section {
+    padding: 50px 20px !important; /* Dikurangi dari 90px menjadi 50px agar pas */
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center !important; 
+    width: 100%;
+    display: block;
+    font-size: 2rem;
+    margin-top: 0; /* Dihapus agar tidak menambah jarak kosong di atas */
+    margin-bottom: 35px; /* Jarak dari judul ke isi konten */
+    color: var(--spicy-red) !important; 
+    text-transform: uppercase; 
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+/* ==========================================================================
+   3. NAVBAR & DROPDOWN (MODERN FLOATING PILL)
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 20px; /* Memberi jarak dari batas atas layar */
+    left: 50%;
+    transform: translateX(-50%); /* Trik menengahkan elemen absolut/fixed */
+    width: 90%;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 50px; /* Membuat ujungnya melingkar seperti kapsul */
+    box-shadow: 0 10px 30px rgba(211, 47, 47, 0.15); /* Bayangan merah tipis */
+    border: 1px solid rgba(255, 179, 0, 0.3); /* Aksen garis kuning tipis */
+}
+
+.navbar .logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--spicy-red);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.5px;
+}
+
+.navbar .logo span {
+    color: var(--tasty-yellow); /* Variasi warna pada kata Wamin */
+}
+
+.navbar .logo .logo-img {
+    width: 38px;         /* Lebar logo, sesuaikan jika kurang besar/kecil */
+    height: 38px;        /* Tinggi logo, samakan dengan lebar agar proporsional */
+    object-fit: contain; /* Memastikan logo tidak gepeng/distorsi */
+    border-radius: 50%;  /* Hapus baris ini jika logo Anda BUKAN lingkaran */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: var(--spicy-red);
+}
+
+/* Mengubah Order Online menjadi gaya tombol (Button) */
+.dropdown .dropbtn {
+    background-color: var(--spicy-red);
+    color: white !important;
+    padding: 10px 22px;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.dropdown .dropbtn:hover {
+    background-color: var(--tasty-yellow);
+    color: var(--dark-text) !important;
+    box-shadow: 0 4px 12px rgba(255, 179, 0, 0.4);
+}
+
+/* Modifikasi Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    z-index: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 15px;
+    right: 0; /* Meratakan menu dropdown ke sisi kanan tombol */
+    border: 1px solid #eee;
+}
+
+.dropdown-content a {
+    color: var(--dark-text) !important;
+    padding: 12px 18px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #f5f5f5;
+    transition: background 0.3s, padding-left 0.3s;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--tasty-yellow);
+    padding-left: 24px; /* Memberikan animasi geser teks saat disorot (hover) */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ==========================================================================
+   4. HERO SECTION
+   ========================================================================== */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(211,47,47,0.4)), url('../images/head.webp') center/cover;
+    display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px; color: var(--light-text);
+}
+.hero h1 { font-size: 3.5rem; color: var(--tasty-yellow); text-shadow: 2px 2px 5px rgba(0,0,0,0.7); margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+
+.btn-group { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+.btn { padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+.btn-primary { background: var(--spicy-red); color: white; border: 2px solid var(--spicy-red); }
+.btn-primary:hover { background: var(--tasty-yellow); color: var(--dark-text); border-color: var(--tasty-yellow); }
+.btn-outline { background: transparent; color: white; border: 2px solid var(--tasty-yellow); }
+.btn-outline:hover { background: var(--tasty-yellow); color: var(--dark-text); }
+
+/* ==========================================================================
+   5. TENTANG & STORY
+   ========================================================================== */
+.story p { text-align: center; color: var(--grey-text); max-width: 700px; margin: auto; font-size: 1.05rem; }
+
+/* ==========================================================================
+   6. MENU GRID & FILTER
+   ========================================================================== */
+.menu-filter { display: flex; justify-content: center; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
+.filter-btn { padding: 8px 20px; border: 2px solid #ddd; background: #fff; border-radius: 20px; cursor: pointer; font-family: 'Poppins', sans-serif; font-weight: 600; color: var(--grey-text); transition: all 0.3s; }
+.filter-btn.active, .filter-btn:hover { background: var(--spicy-red); color: white; border-color: var(--spicy-red); }
+
+.menu-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.menu-item { display: flex; align-items: center; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); gap: 15px; border-left: 5px solid var(--tasty-yellow); transition: transform 0.3s ease; }
+.menu-item:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+.menu-item img { width: 90px; height: 90px; object-fit: cover; border-radius: 8px; }
+
+.menu-info { flex: 1; }
+.menu-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+.menu-title { font-weight: 700; font-size: 1.1rem; color: var(--dark-text); }
+.menu-price { font-weight: 700; color: var(--spicy-red); font-size: 1.1rem; }
+.menu-desc { font-size: 0.85rem; color: var(--grey-text); margin-bottom: 12px; }
+
+.badge { font-size: 0.65rem; padding: 3px 8px; border-radius: 10px; color: white; margin-left: 8px; font-weight: 600; vertical-align: middle; }
+.b-best { background: var(--spicy-red); }
+.b-recom { background: var(--tasty-yellow); color: var(--dark-text); }
+.hide { display: none !important; }
+
+/* Tombol + Keranjang */
+.add-cart-btn {
+    padding: 8px 18px; background-color: var(--clean-white); color: var(--spicy-red);
+    border: 2px solid var(--spicy-red); border-radius: 25px; font-size: 0.85rem; font-weight: 600;
+    cursor: pointer; transition: all 0.3s ease; font-family: 'Poppins', sans-serif;
+}
+.add-cart-btn:hover { background-color: var(--spicy-red); color: white; }
+
+/* ==========================================================================
+   7. GALLERY
+   ========================================================================== */
+.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.gallery-grid img { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== */
+.footer { background: var(--dark-text); color: var(--light-text); text-align: center; padding: 60px 20px; border-top: 6px solid var(--spicy-red); }
+.footer h3 { font-size: 1.8rem; color: var(--tasty-yellow); margin-bottom: 15px; }
+.footer p { color: #ccc; margin-bottom: 5px; }
+.social-icons { margin: 25px 0; display: flex; justify-content: center; gap: 15px; }
+.social-icons a { color: var(--light-text); text-decoration: none; padding: 8px 20px; border: 1px solid rgba(255,255,255,0.3); border-radius: 25px; transition: all 0.3s; font-size: 0.9rem; }
+.social-icons a:hover { background: var(--spicy-red); border-color: var(--spicy-red); }
+.footer .copyright { margin-top: 30px; font-size: 0.85rem; color: #777; }
+
+/* ==========================================================================
+   9. KERANJANG BELANJA (CART) & SIDEBAR
+   ========================================================================== */
+.floating-cart {
+    position: fixed; bottom: 30px; right: 30px; background-color: var(--tasty-yellow); color: var(--dark-text);
+    padding: 15px 25px; border-radius: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); cursor: pointer; z-index: 999;
+    font-weight: 700; font-size: 1rem; transition: transform 0.3s; display: flex; align-items: center; gap: 10px;
+}
+.floating-cart:hover { transform: scale(1.05); background-color: var(--spicy-red); color: white; }
+
+.cart-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; visibility: hidden; opacity: 0; transition: 0.3s; }
+.cart-overlay.active { visibility: visible; opacity: 1; }
+
+.cart-sidebar {
+    position: fixed; top: 0; right: -420px; width: 100%; max-width: 380px; height: 100vh; background: white; z-index: 1001;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.2); transition: right 0.4s ease; display: flex; flex-direction: column;
+}
+.cart-sidebar.active { right: 0; }
+.cart-header { padding: 20px; background-color: var(--spicy-red); color: white; display: flex; justify-content: space-between; align-items: center; }
+.cart-header h3 { font-size: 1.3rem; }
+#close-cart { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: white; }
+
+.cart-items { flex: 1; overflow-y: auto; padding: 20px; }
+.cart-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+.cart-item-info h4 { font-size: 1rem; margin-bottom: 5px; color: var(--dark-text); }
+.cart-item-info p { font-size: 0.9rem; color: var(--spicy-red); font-weight: 700; }
+.cart-item-qty { display: flex; align-items: center; gap: 12px; }
+.qty-btn { background: #f0f0f0; border: none; width: 30px; height: 30px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 1.1rem; color: var(--dark-text); transition: background 0.2s;}
+.qty-btn:hover { background: var(--tasty-yellow); }
+
+.cart-footer { padding: 20px; border-top: 1px solid #eee; background: #fafafa; }
+.cart-total { display: flex; justify-content: space-between; font-weight: 700; font-size: 1.3rem; margin-bottom: 15px; color: var(--dark-text); }
+.checkout-input { width: 100%; padding: 12px; margin-bottom: 12px; border-radius: 8px; border: 1px solid #ddd; font-family: 'Poppins', sans-serif; font-size: 0.95rem; transition: all 0.3s; }
+.checkout-input:focus { outline: none; border-color: var(--spicy-red); box-shadow: 0 0 0 2px rgba(211,47,47,0.2); }
+.btn-checkout { width: 100%; padding: 15px; background-color: #25D366; color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; font-family: 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.3s; }
+.btn-checkout:hover { background-color: #1EBE5C; box-shadow: 0 4px 15px rgba(37,211,102,0.4); }
+
+/* ==========================================================================
+   9.5. STYLING CHECKOUT, TIPE PESANAN & QRIS
+   ========================================================================== */
+.order-type-container {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.order-type-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--dark-text);
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-group label {
+    font-size: 0.9rem;
+    color: var(--dark-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Mengubah warna titik radio button menjadi merah khas Wamin */
+.radio-group input[type="radio"] {
+    accent-color: var(--spicy-red);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Animasi Muncul Halus untuk QRIS */
+.qris-section {
+    margin-top: 15px;
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.qris-divider {
+    border: none;
+    border-top: 1px dashed #ccc;
+    margin-bottom: 15px;
+}
+
+.qris-instruction {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    color: var(--dark-text);
+}
+
+.qris-instruction strong {
+    font-size: 1.3rem;
+    color: var(--spicy-red);
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.qris-image {
+    width: 220px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    border: 3px solid var(--tasty-yellow);
+}
+
+/* Kotak Peringatan Screenshot */
+.qris-alert {
+    background-color: rgba(255, 179, 0, 0.15);
+    border-left: 4px solid var(--tasty-yellow);
+    padding: 12px;
+    font-size: 0.85rem;
+    text-align: left;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    color: var(--dark-text);
+    line-height: 1.5;
+}
+
+/* Tombol WhatsApp (Berbeda dari tombol Lanjut Pembayaran) */
+.wa-btn {
+    background-color: #25D366 !important; /* Warna Hijau Khas WhatsApp */
+    font-size: 0.95rem !important;
+}
+
+.wa-btn:hover {
+    background-color: #1EBE5C !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* ==========================================================================
+   10. RESPONSIVE LAYOUT (Wajib berada di paling bawah!)
+   ========================================================================== */
+@media(min-width: 768px) {
+    .menu-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero h1 { font-size: 4.5rem; }
+    .navbar { padding: 15px 10%; }
+}
+
+/* ==========================================================================
+   11. PENYESUAIAN KHUSUS LAYAR MOBILE (HP)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Menyesuaikan Navbar Kapsul agar tersusun vertikal di HP */
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 15px;
+        border-radius: 20px; /* Kelengkungan disesuaikan */
+        width: 95%;
+    }
+
+    .navbar .logo {
+        font-size: 1.2rem;
+    }
+
+    .navbar .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .navbar .nav-links li a {
+        font-size: 0.85rem;
+    }
+
+    .dropdown .dropbtn {
+        padding: 6px 14px;
+        font-size: 0.85rem;
+    }
+
+    /* Dropdown menu order online agar rata tengah di HP */
+    .dropdown-content {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Menyesuaikan teks judul agar tidak terlalu raksasa di HP */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 40px 25px !important; /* Jarak atas-bawah dikurangi jadi 40px untuk HP */
+        overflow-x: hidden;
+    }
+
+    /* Sidebar Keranjang agar tampil penuh layar di HP */
+    .cart-sidebar {
+        width: 100%;
+        max-width: 100%;
+        right: -100%;
+    }
+
+    
+}
+
+/* ==========================================================================
+   FIX SCROLL SIDEBAR & QRIS DI HP (MOBILE)
+   ========================================================================== */
+.cart-sidebar {
+    overflow-y: auto !important; /* Memaksa agar seluruh panel keranjang bisa di-scroll */
+}
+
+.cart-footer {
+    overflow-y: auto; /* Mengizinkan scroll khusus di area footer/QRIS */
+    max-height: 85vh; /* Mencegah footer bablas melebihi tinggi layar HP */
+    padding-bottom: 50px !important; /* Memberikan ruang napas agar tombol paling bawah tidak mentok di pinggir layar */
+}

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakso Mie Wamin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#home" class="logo">
+            <!-- Pastikan nama file "logo.png" diganti dengan nama file logo asli Anda yang ada di folder assets -->
+            <img src="assets/bakso-mie-wamin_logo.png" alt="Logo Wamin" class="logo-img">
+            Bakso Mie <span>Wamin</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#location">Lokasi</a></li>
+            <li class="dropdown">
+                <a href="#online" class="dropbtn">Order Online ▾</a>
+                <div class="dropdown-content">
+                    <a href="https://shopee.co.id" target="_blank">🛵 ShopeeFood</a>
+                    <a href="https://grab.com" target="_blank">🛵 GrabFood</a>
+                    <a href="https://gofood.co.id" target="_blank">🛵 GoFood</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Bakso Mie Wamin</h1>
+            <p>Sensasi Pedas dan Kelezatan di Setiap Suapan.</p>
+            <div class="btn-group">
+                <a href="#menu" class="btn btn-primary">Pesan Sekarang</a>
+                <a href="#location" class="btn btn-outline">Lokasi Kami</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="story" id="story">
+            <h2 class="section-title">Tentang Kami</h2>
+            <p>Berawal dari resep warisan keluarga, Bakso Mie Wamin hadir menyajikan perpaduan sempurna antara kuah kaldu sapi yang gurih, bakso daging asli yang kenyal, dan mie racikan khas dengan tingkat kepedasan yang bisa menantang selera Anda. Kami menjamin kelezatan yang bikin nagih!</p>
+        </section>
+
+        <section class="menu" id="menu">
+            <h2 class="section-title">Menu Spesial Wamin</h2>
+            
+            <div class="menu-filter">
+                <button class="filter-btn active" data-filter="all">Semua Menu</button>
+                <button class="filter-btn" data-filter="bakso">Menu Bakso</button>
+                <button class="filter-btn" data-filter="mie">Menu Mie</button>
+                <button class="filter-btn" data-filter="minuman">Minuman</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- ================= KATEGORI: BAKSO WAMIN ================= -->
+                <div class="menu-item filter-target bakso">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Bakso Mini</span>
+                            <span class="menu-price">13k</span>
+                        </div>
+                        <p class="menu-desc">Porsi pas untuk ngemil nikmat.</p>
+                        <button class="add-cart-btn" data-name="Bakso Mini" data-price="13000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target bakso">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Bakso Urat <span class="badge b-recom">Recom</span></span>
+                            <span class="menu-price">17k</span>
+                        </div>
+                        <p class="menu-desc">Bakso urat sapi asli yang kenyal dan gurih.</p>
+                        <button class="add-cart-btn" data-name="Bakso Urat" data-price="17000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target bakso">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Bakso Telur</span>
+                            <span class="menu-price">18k</span>
+                        </div>
+                        <p class="menu-desc">Bakso sapi dengan isian telur ayam rebus.</p>
+                        <button class="add-cart-btn" data-name="Bakso Telur" data-price="18000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target bakso">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Bakso Wamin Spesial <span class="badge b-best">Best Seller</span></span>
+                            <span class="menu-price">25k</span>
+                        </div>
+                        <p class="menu-desc">Kombinasi mantap: Urat + Kecil + Granat/Telur.</p>
+                        <button class="add-cart-btn" data-name="Bakso Wamin Spesial" data-price="25000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- ================= KATEGORI: BAKSO TULANG WAMIN ================= -->
+                <div class="menu-item filter-target bakso">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Bakso Mini + Tulang Ayam</span>
+                            <span class="menu-price">16k</span>
+                        </div>
+                        <p class="menu-desc">Sensasi ngariung tulang ayam gurih.</p>
+                        <button class="add-cart-btn" data-name="Bakso Mini + Tulang Ayam" data-price="16000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target bakso">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Bakso Urat + Tulang Ayam</span>
+                            <span class="menu-price">20k</span>
+                        </div>
+                        <p class="menu-desc">Bakso urat disajikan dengan ekstra tulang ayam.</p>
+                        <button class="add-cart-btn" data-name="Bakso Urat + Tulang Ayam" data-price="20000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target bakso">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Bakso Telur + Tulang Ayam</span>
+                            <span class="menu-price">21k</span>
+                        </div>
+                        <p class="menu-desc">Paket bakso telur lengkap dengan tulang ayam.</p>
+                        <button class="add-cart-btn" data-name="Bakso Telur + Tulang Ayam" data-price="21000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target bakso">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Bakso Ayam Spesial + Tulang Ayam</span>
+                            <span class="menu-price">28k</span>
+                        </div>
+                        <p class="menu-desc">Porsi barbar: Urat + Kecil + Granat/Telur + Tulang.</p>
+                        <button class="add-cart-btn" data-name="Bakso Ayam Spesial + Tulang Ayam" data-price="28000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- ================= KATEGORI: MIE WAMIN (ORIGINAL) ================= -->
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin</span>
+                            <span class="menu-price">12k</span>
+                        </div>
+                        <p class="menu-desc">Mie racikan khas original.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin" data-price="12000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Bakso</span>
+                            <span class="menu-price">15k</span>
+                        </div>
+                        <p class="menu-desc">Mie original ditambah pelengkap bakso.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Bakso" data-price="15000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Ceker</span>
+                            <span class="menu-price">15k</span>
+                        </div>
+                        <p class="menu-desc">Mie original dengan toping ceker empuk.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Ceker" data-price="15000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Tulangan</span>
+                            <span class="menu-price">15k</span>
+                        </div>
+                        <p class="menu-desc">Mie original disajikan dengan tulangan ayam gurih.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Tulangan" data-price="15000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Spesial</span>
+                            <span class="menu-price">18k</span>
+                        </div>
+                        <p class="menu-desc">Porsi lengkap: Bakso + Ceker/Tulangan.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Spesial" data-price="18000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Bakso Urat</span>
+                            <span class="menu-price">22k</span>
+                        </div>
+                        <p class="menu-desc">Perpaduan mie khas dengan bakso urat besar.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Bakso Urat" data-price="22000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Bakso Telur</span>
+                            <span class="menu-price">23k</span>
+                        </div>
+                        <p class="menu-desc">Mie khas ditemani bakso sapi isian telur.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Bakso Telur" data-price="23000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- ================= KATEGORI: MIE WAMIN MERCON (PEDAS) ================= -->
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Mercon <span class="badge b-recom">Spicy</span></span>
+                            <span class="menu-price">15k</span>
+                        </div>
+                        <p class="menu-desc">Mie pedas mercon tanpa topping.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Mercon" data-price="15000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Mercon Bakso Mini</span>
+                            <span class="menu-price">18k</span>
+                        </div>
+                        <p class="menu-desc">Mie pedas nendang ditambah bakso mini.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Mercon Bakso Mini" data-price="18000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Mercon Ceker</span>
+                            <span class="menu-price">18k</span>
+                        </div>
+                        <p class="menu-desc">Kenikmatan ceker empuk bumbu mercon.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Mercon Ceker" data-price="18000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Mercon Tulangan</span>
+                            <span class="menu-price">18k</span>
+                        </div>
+                        <p class="menu-desc">Mie pedas dengan sensasi isap tulang ayam.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Mercon Tulangan" data-price="18000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Mercon Spesial <span class="badge b-best">Best Seller</span></span>
+                            <span class="menu-price">20k</span>
+                        </div>
+                        <p class="menu-desc">Perpaduan topping melimpah bumbu mercon.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Mercon Wamin Spesial" data-price="20000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Mercon Bakso Urat</span>
+                            <span class="menu-price">22k</span>
+                        </div>
+                        <p class="menu-desc">Bakso urat jumbo di atas lautan mie mercon.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Mercon Bakso Urat" data-price="22000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Mercon Bakso Granat</span>
+                            <span class="menu-price">24k</span>
+                        </div>
+                        <p class="menu-desc">Super pedas meledak di mulut!</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Mercon Bakso Granat" data-price="24000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target mie">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Mie Wamin Mercon Bakso Telur</span>
+                            <span class="menu-price">25k</span>
+                        </div>
+                        <p class="menu-desc">Kombinasi mercon pedas dengan lembutnya bakso telur.</p>
+                        <button class="add-cart-btn" data-name="Mie Wamin Mercon Bakso Telur" data-price="25000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- ================= KATEGORI: MINUMAN ================= -->
+                <div class="menu-item filter-target minuman">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Es Teh Manis</span>
+                            <span class="menu-price">5k</span>
+                        </div>
+                        <p class="menu-desc">Segar untuk meredakan pedas.</p>
+                        <button class="add-cart-btn" data-name="Es Teh Manis" data-price="5000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target minuman">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Es Teh Hijau</span>
+                            <span class="menu-price">5k</span>
+                        </div>
+                        <p class="menu-desc">Seduhan teh hijau melati dingin.</p>
+                        <button class="add-cart-btn" data-name="Es Teh Hijau" data-price="5000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target minuman">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Es Kopyor</span>
+                            <span class="menu-price">7k</span>
+                        </div>
+                        <p class="menu-desc">Manis, segar, dengan jelly kopyor.</p>
+                        <button class="add-cart-btn" data-name="Es Kopyor" data-price="7000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target minuman">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Es Capucino Cincau</span>
+                            <span class="menu-price">5k</span>
+                        </div>
+                        <p class="menu-desc">Paduan kopi susu dengan cincau hitam kenyal.</p>
+                        <button class="add-cart-btn" data-name="Es Capucino Cincau" data-price="5000">+ Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="menu-item filter-target minuman">
+                    <div class="menu-info">
+                        <div class="menu-header">
+                            <span class="menu-title">Es Teh Tarik</span>
+                            <span class="menu-price">8k</span>
+                        </div>
+                        <p class="menu-desc">Teh susu gurih khas tarik.</p>
+                        <button class="add-cart-btn" data-name="Es Teh Tarik" data-price="8000">+ Keranjang</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <h2 class="section-title">Suasana Wamin</h2>
+            <div class="gallery-grid">
+                <img src="../images/123.webp" alt="Suasana Wamin 1" loading="lazy">
+                <img src="../images/456.webp" alt="Suasana Wamin 2" loading="lazy">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="location">
+        <h3>Bakso Mie Wamin</h3>
+        
+        <!-- Menambahkan link Google Maps yang bisa diklik -->
+        <p class="address">
+            <a href="https://maps.app.goo.gl/CAS5kaRmvJBkg2vV7?g_st=ac" target="_blank" style="color: #e0e0e0; text-decoration: none; border-bottom: 1px dashed #e0e0e0; padding-bottom: 2px; transition: color 0.3s;">
+                📍 Jl. Kramat, RT.3/RW.1, Kby. Lama Utara, Kec. Kebayoran Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12210
+            </a>
+        </p>
+        
+        <p class="hours">Buka Setiap Hari: 10.00 - 21.00</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/baksomiewamin?igsh=NDVsemNyY2w2c3Q0">Instagram</a>
+            <a href="https://wa.me/6281380042632" target="_blank">WhatsApp Admin 1</a>
+            <a href="https://wa.me/6289601538945" target="_blank">WhatsApp Admin 2</a>
+        </div>
+        <p class="copyright">&copy; 2026 Bakso Mie Wamin. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <div id="floating-cart" class="floating-cart">
+        🛒 Pesanan (<span id="cart-count">0</span>)
+    </div>
+
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Detail Pesanan Anda</h3>
+            <button id="close-cart">✕</button>
+        </div>
+        
+        <div id="cart-items" class="cart-items">
+            </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total Belanja:</span>
+                <span id="total-price">Rp0</span>
+            </div>
+            
+            <div class="order-type-container">
+                <p class="order-type-label">Pilih Tipe Pesanan:</p>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="order-type" value="dine-in" checked> 
+                        Dine-in (Makan di Sini)
+                    </label>
+                    <label>
+                        <input type="radio" name="order-type" value="take-away"> 
+                        Take Away (Bawa Pulang)
+                    </label>
+                    <label>
+                        <input type="radio" name="order-type" value="delivery"> 
+                        Delivery (Pesan Antar)
+                    </label>
+                </div>
+            </div>
+            
+            <input type="text" id="table-number" class="checkout-input" placeholder="Nomor Meja Anda (Contoh: Meja 4)">
+            
+            <textarea id="customer-address" class="checkout-input hide" rows="3" placeholder="Tulis Alamat Lengkap & Link Google Maps di sini..."></textarea>
+            
+            <button id="btn-show-qris" class="btn-checkout">Lanjut Pembayaran</button>
+
+            <div id="qris-section" class="qris-section hide">
+                <hr class="qris-divider">
+                <p class="qris-instruction">Silakan scan QRIS di bawah ini dengan total pembayaran: <br><strong id="qris-amount">Rp0</strong></p>
+                
+                <img src="assets/qris.jpeg" alt="QRIS Bakso Mie Wamin" class="qris-image">
+                
+                <div class="qris-alert">
+                    ⚠️ <strong>PENTING:</strong><br>Jangan lupa <em>screenshot</em> bukti transfer Anda untuk dikirim via WhatsApp!
+                </div>
+
+                <button id="checkout-btn" class="btn-checkout wa-btn">Saya Sudah Bayar, Konfirmasi via WA</button>
+            </div>
+        </div>
+
+</body>
+</html>
